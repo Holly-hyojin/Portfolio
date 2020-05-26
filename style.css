@@ -1,0 +1,80 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  /*--accent-color:red;;*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Alegreya";
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-shadow: 1px 0px rgba(255, 0, 0, 0.863);
+}
+
+nav li {
+  font-weight: bold;
+}
+
+.logoimg {
+  width: 55px;
+}
+/* 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+  font-size: 20px;
+} */
+
+/* section */
+#aboutMe {
+  height: 700px;
+  background-color: #f1d1d1;
+  display: inline-block;
+  width: 100%;
+}
+#aboutMe img {
+  margin: 10px;
+  border-radius: 60%;
+  padding: 0px;
+  max-width: 40%;
+  max-height: 40%;
+}
+
+#skills {
+  height: 700px;
+  background-color: rgb(228, 225, 76);
+  display: inline-block;
+  width: 100%;
+}
+
+#myWork {
+  height: 700px;
+  background-color: pink;
+  display: inline-block;
+  width: 100%;
+}
+
+#contact {
+  height: 700px;
+  background-color: rgb(145, 236, 236);
+  display: inline-block;
+  width: 100%;
+}
