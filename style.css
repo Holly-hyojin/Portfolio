@@ -33,6 +33,7 @@ nav li {
 .logoimg {
   width: 55px;
 }
+
 /* 
 #navbar {
   display: flex;
@@ -41,13 +42,13 @@ nav li {
   background-color: var(--background-color);
   padding: 8px 12px;
   font-size: 20px;
-} */
+} 
 
 .home__avatar {
   width: 150px;
 }
 
-/* section */
+section
 
 #aboutMe {
   height: 700px;
@@ -76,3 +77,5 @@ nav li {
   display: inline-block;
   width: 100%;
 }
+
+*/
