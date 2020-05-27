@@ -1,8 +1,8 @@
-:root {
+/* :root {
   --text-color: #f0f4f5;
   --background-color: #263343;
   /*--accent-color:red;;*/
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -34,6 +34,14 @@ nav li {
   width: 55px;
 }
 
+.project img {
+  width: 150px;
+}
+
+.home__avatar {
+  width: 250px;
+}
+
 /* 
 #navbar {
   display: flex;
@@ -44,11 +52,8 @@ nav li {
   font-size: 20px;
 } 
 
-.home__avatar {
-  width: 150px;
-}
 
-section
+// section
 
 #aboutMe {
   height: 700px;
