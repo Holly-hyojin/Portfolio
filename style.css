@@ -195,7 +195,7 @@ p {
 .shool__decription {
   align-items: center;
   margin: 30px 26px;
-  text-align: left; /*글씨정렬*/
+  text-align: right; /*글씨정렬*/
 }
 
 .school {
@@ -236,10 +236,10 @@ p {
   /* background-color: green; 임시적으로 아이콘의 사이즈를 보기위함 */
   font-size: 70px;
   margin: auto;
-  border: 1px solid var(--color-blue);
+  border: 1px solid var(--color-dark-pink);
   border-radius: 50%;
   margin-bottom: 16px;
-  color: var(--color-blue);
+  color: var(--color-pink);
 }
 .major__icon i {
   /*급작하게 변하는 대신에 효과주는 것 */
@@ -251,7 +251,7 @@ p {
   major__icon:hover 을하면 동그라미부터 전체에 효과 
   major__icon i:hover를 하면 i에 닿았을 때만 효과
   major__icon:hover i하면 동그라미에 호버 되도 안에 있는 i에만 효과, i만 움직임*/
-  color: var(--color-pink);
+  color: var(--color-blue);
   transform: scale(1.1);
 }
 
@@ -262,6 +262,67 @@ p {
 
 .major__description {
   font-size: var(--font-small);
+}
+
+/* Skills  - skillset*/
+
+#skills {
+  background-color: var(--color-yellow);
+}
+.skillset {
+  background-color: var(--color-light-grey);
+  display: flex;
+  color: var(--color-light-white);
+}
+
+.skillset__title {
+  color: var(--color-white);
+  margin: auto;
+  font-weight: var(--weight-semi-bold);
+  text-shadow: 1px 1px var(--color-black);
+}
+
+.skillset__left {
+  flex-basis: 60%; /*스킬셋 안에서 left가 60 right이 40 차지 */
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill_value {
+  /* width: 70%; css에서 정의하면 전체 value값을 지정해서
+  html에서 각각 지정해주고 따로 추출해서 json으로 관리하고
+  json에서 동적으로 받아온 데이터를 html코드로 변환해서 입력
+  html에 style태그를 인라인화  */
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
 
 /* /////////////////////////////////////////////////// */
