@@ -23,6 +23,8 @@
 
   --color-yellow: #fff7d1;
 
+  --color-dark-yellow: #f5d06a;
+
   --color-orange: #feb546;
 
   --color-black: #000000;
@@ -46,7 +48,11 @@
   --weight-regular: 400;
   /* Size */
   --size-border-radius: 6px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
 }
+
 /*  Uiversal tags 공통적으로 들어가는 것 */
 * {
   box-sizing: border-box;
@@ -64,8 +70,18 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography: heading, font에 대해 */
@@ -101,11 +117,11 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-yellow);
   align-items: center;
   color: var(--color-white);
-  text-shadow: 1px 0px rgba(255, 0, 0, 0.863);
-  padding: 16px;
+  text-shadow: 1px 0px rgba(55, 111, 233, 0.918);
+  padding: 0px 10px;
 }
 
 .navbar__menu {
@@ -115,29 +131,141 @@ p {
 .logoimg {
   /* font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold); logo를 icon으로 바꾸면 이걸 적용 */
-  width: 55px;
+  width: 40px;
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  font-size: var(--font-regular);
   cursor: pointer; /*메뉴아이템에 커서를 올리면 포인터로 변함*/
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-blue);
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
-}
-/* ////////////// */
-/*  ///////////// 아래는 내가 공부전에 한 것*/
-html {
-  scroll-behavior: smooth;
+  background-color: var(--color-orange);
 }
 
+/* Home */
+
+#home {
+  background: url("image/bg2.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 210x;
+  height: 230px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__titile,
+.home__description {
+  color: var(--color-light-white);
+  text-shadow: 1px 1.2px rgba(102, 160, 47, 0.966);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid rgb(241, 232, 224);
+  border-radius: var(--size-border-radius);
+  text-shadow: 1px 1px rgb(182, 212, 74);
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+/* About - 나는 경력이 없어서 학교만 */
+
+.about__experience,
+.shool__decription {
+  align-items: center;
+  margin: 30px 26px;
+  text-align: left; /*글씨정렬*/
+}
+
+.school {
+  display: flex;
+  align-items: center;
+  margin: 10px 16px;
+  justify-content: space-between;
+}
+.school__logo {
+  height: 100px;
+}
+
+.shcool__name,
+.shcool__period {
+  color: var(--color-light-grey);
+}
+
+.shcool__name {
+  size: var(--font-small);
+}
+
+.shcool__period {
+  size: var(--font-micro);
+}
+
+/* Skills - major */
+
+.about__majors {
+  display: flex; /*major를 옆으로 나란히, 안하면 아래로 정렬됌*/
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px; /*line height을 높이만큼 주면 안의 아이템에 중간으로 배치 */
+  /* background-color: green; 임시적으로 아이콘의 사이즈를 보기위함 */
+  font-size: 70px;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: var(--color-blue);
+}
+.major__icon i {
+  /*급작하게 변하는 대신에 효과주는 것 */
+  transition: all var(--animation-duration) ease; /*250-300ms가 적당*/
+}
+
+.major__icon:hover i {
+  /*
+  major__icon:hover 을하면 동그라미부터 전체에 효과 
+  major__icon i:hover를 하면 i에 닿았을 때만 효과
+  major__icon:hover i하면 동그라미에 호버 되도 안에 있는 i에만 효과, i만 움직임*/
+  color: var(--color-pink);
+  transform: scale(1.1);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+/* /////////////////////////////////////////////////// */
+/*  ///////////// 아래는 내가 공부전에 한 것*/
 /* a {
   text-decoration: none;
   color: var(--text-color);
@@ -163,9 +291,9 @@ nav li {
   width: 150px;
 }
 
-.home__avatar {
+/* .home__avatar {
   width: 250px;
-}
+} */
 
 /* 
 #navbar {
