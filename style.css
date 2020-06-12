@@ -3,15 +3,15 @@
   /* Color */
   --text-color: #f0f4f5;
   --background-color: #263343;
-  --color-white: #ffffff;
+  --color-white: #faf9f9;
 
   --color-light-white: #eeeeee;
 
   --color-dark-white: #bdbdbd;
 
-  --color-pink: #fe918d;
+  --color-pink: #fe918de7;
 
-  --color-dark-pink: #ff6863;
+  --color-dark-pink: #f7726e;
 
   --color-dark-grey: #4d4d4d;
 
@@ -45,10 +45,27 @@
 
   --weight-regular: 400;
   /* Size */
+  --size-border-radius: 6px;
 }
 /*  Uiversal tags 공통적으로 들어가는 것 */
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Alegreya", sans-serif;
+  cursor: default; /*마우스 커서가 텍스트에 가도 변하지 않음*/
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Typography: heading, font에 대해 */
@@ -80,36 +97,67 @@ p {
   margin: 4px 0;
 }
 
-/*  */
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  color: var(--color-white);
+  text-shadow: 1px 0px rgba(255, 0, 0, 0.863);
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.logoimg {
+  /* font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold); logo를 icon으로 바꾸면 이걸 적용 */
+  width: 55px;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer; /*메뉴아이템에 커서를 올리면 포인터로 변함*/
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
+}
+/* ////////////// */
+/*  ///////////// 아래는 내가 공부전에 한 것*/
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  font-family: "Alegreya";
-}
-
-a {
+/* a {
   text-decoration: none;
   color: var(--text-color);
-}
+} */
 
-nav a {
+/* nav a {
   color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   text-shadow: 1px 0px rgba(255, 0, 0, 0.863);
-}
+} */
 
 nav li {
   font-weight: bold;
 }
 
-.logoimg {
+/* .logoimg {
   width: 55px;
-}
+} */
 
 .project img {
   width: 150px;
