@@ -186,9 +186,14 @@ p {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+
+.section__container {
   max-width: 1000px;
   margin: auto;
 }
+
 /* About - 나는 경력이 없어서 학교만 */
 
 .about__experience,
