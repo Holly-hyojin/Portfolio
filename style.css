@@ -251,7 +251,7 @@ p {
   major__icon:hover 을하면 동그라미부터 전체에 효과 
   major__icon i:hover를 하면 i에 닿았을 때만 효과
   major__icon:hover i하면 동그라미에 호버 되도 안에 있는 i에만 효과, i만 움직임*/
-  color: var(--color-blue);
+  color: var(--color-dark-grey);
   transform: scale(1.1);
 }
 
@@ -491,6 +491,31 @@ nav li {
 
 .project img {
   width: 150px;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-dark-yellow);
+}
+
+.contact__title,
+.contact__rights {
+  color: var(--color-white);
+  text-shadow: 1px 1.2px rgba(102, 160, 47, 0.966);
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transition: all var(--animation-duration) ease;
+  margin: 0 10px;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
 }
 
 /* .home__avatar {
