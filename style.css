@@ -124,6 +124,9 @@ p {
   padding: 0px 10px;
 }
 
+nav li {
+  font-weight: bold;
+}
 .navbar__menu {
   display: flex;
 }
@@ -148,6 +151,19 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-orange);
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px; /*오른쪽에서 32px떨어지게 */
+  top: 20px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none; /*평소에는 보이지 않음*/
+}
+
+.navbar__toggle-btn:hover {
+  color: var(--color-dark-pink);
 }
 
 /* Home */
@@ -380,10 +396,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   height: 250px;
-  margin: 2px;
+  margin: 12px;
   background-color: beige;
+}
+
+.project img {
+  width: 150px;
 }
 
 .project__img {
@@ -471,33 +491,6 @@ p {
   color: var(--color-pink);
 }
 
-/* /////////////////////////////////////////////////// */
-/*  ///////////// 아래는 내가 공부전에 한 것*/
-/* a {
-  text-decoration: none;
-  color: var(--text-color);
-} */
-
-/* nav a {
-  color: var(--text-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  text-shadow: 1px 0px rgba(255, 0, 0, 0.863);
-} */
-
-nav li {
-  font-weight: bold;
-}
-
-/* .logoimg {
-  width: 55px;
-} */
-
-.project img {
-  width: 150px;
-}
-
 /* Contact */
 #contact {
   background-color: var(--color-dark-yellow);
@@ -523,20 +516,54 @@ nav li {
   color: var(--color-blue);
 }
 
-/* .home__avatar {
-  width: 250px;
-} */
+/* 반응형 웹, 토글버튼 최소한의 정보만 (ex 스크린이 작아질때 바뀌는 점) 
+그외는 미디어쿼리 밖에 스타일링을 하기 */
+@media screen and (max-width: 768px) {
+  .navbar__logo {
+    top: 24px;
+    padding: 15px;
+  }
 
-/* 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--background-color);
-  padding: 8px 12px;
-  font-size: 20px;
-} 
+  .navbar__toggle-btn {
+    display: block;
+  }
 
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    /* display: none; */
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    display: flex;
+    flex-grow: 1; /*화면이 작아지면 빈 공간을 채워줌 */
+  }
+
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* /////////////////////////////////////////////////// */
+/*  ///////////// 아래는 내가 공부전에 한 것
 
 // section
 
