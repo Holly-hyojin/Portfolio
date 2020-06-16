@@ -115,13 +115,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-dark-yellow);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   text-shadow: 1px 0px rgba(55, 111, 233, 0.918);
   padding: 0px 10px;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-yellow);
+  padding: 0 8px;
+  transition: all var(--animation-duration) ease;
 }
 
 nav li {
@@ -169,8 +177,9 @@ nav li {
 /* Home */
 
 #home {
-  background: url("image/bg2.png") center/cover no-repeat;
+  background: url('image/bg2.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 110px;
   text-align: center;
 }
 
@@ -436,7 +445,7 @@ nav li {
 }
 
 .project__descrition h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
@@ -533,11 +542,15 @@ nav li {
     align-items: flex-start;
   }
 
+  .navbar {
+    width: 100%;
+  }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    /* display: none; */
+    display: none;
   }
 
   .about__majors {
@@ -552,7 +565,6 @@ nav li {
   }
 
   .project {
-    display: flex;
     flex-grow: 1; /*화면이 작아지면 빈 공간을 채워줌 */
   }
 
