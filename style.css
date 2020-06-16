@@ -526,6 +526,27 @@ nav li {
   color: var(--color-blue);
 }
 
+/* Scroll  */
+.arrow-up {
+  position: fixed;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  right: 50px;
+  font-size: 40px;
+  background-color: var(--color-orange);
+  color: var(--color-light-grey);
+  border-radius: 50%;
+  opacity: 0; /*display를 none으로 하면 없어졌다 나타나기 때문에 애니메이션 효과를 줄 수 없다. 그래서 opacity 사용*/
+  pointer-events: none; /*opacity는 보이지 않지만 클릭이 되서 이 속성으로 클릭이 안되게 만듦.*/
+  transition: opacity 300ms ease;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* 반응형 웹, 토글버튼 최소한의 정보만 (ex 스크린이 작아질때 바뀌는 점) 
 그외는 미디어쿼리 밖에 스타일링을 하기 */
 @media screen and (max-width: 768px) {
