@@ -35,6 +35,23 @@ contactMe.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
+// Handle fade home when is scroll down
+// Make home slowly fade to transparent as the window scrolls down
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  // console.log(homeHeight); height 이 얼만지 확인
+  // console.log(1 - window.scrollY / homeHeight);
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// fade 내가 했던 것. 스무스하게 안되고 그냥 단일값을 줌
+//const fadeHome = document.querySelector('#home');
+// document.addEventListener('scroll', () => {
+//   fadeHome.style.opacity = '0.5';
+// });
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
