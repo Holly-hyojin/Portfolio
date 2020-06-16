@@ -24,7 +24,18 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return; //null 일 때는 아무것도 하지 않고 null일때만 아래의 콘솔이 실행
   }
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  // console.log(event.target.dataset.link);
+  scrollIntoView(link);
 });
+
+// Handle click on 'contact Me' button
+
+const contactMe = document.querySelector('.home__contact');
+contactMe.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
