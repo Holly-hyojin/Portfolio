@@ -67,6 +67,33 @@ arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
 
+// Project button click, filtering
+
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  // 앞의 값이 false면 뒤의 parentNode에서 받아오는 데이터를 쓰겠다는 것 (숫자 주는 category__count를 클릭해도 값 받아오기 위함)
+  if (filter == null) {
+    return; // filter값이 null이면 아무것도 안함
+  }
+  projectContainer.classList.add('anim-out'); //버튼이 클릭되면 클래스를 추가
+  setTimeout(() => {
+    //setTimeout은 브라우저에서 제공하는 api라서 위에 anim가 추가되고 0.3초후에 아래의 코드가 실행
+    //애니메이션을 좀 더 자연스럽게 주기 위함
+    projects.forEach((project) => {
+      // console.log(project.dataset.type); 체크하기 위함
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300); //버튼 클릭하고 넘어갈 때 타임아웃을 주어서 0.3초 후에 사라지게
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });

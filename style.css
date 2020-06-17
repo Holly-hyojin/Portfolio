@@ -380,25 +380,33 @@ nav li {
   top: 0; //카테고리 카운트에 효과 주는건데 나는 별로 안 예쁨
 } */
 
-.category__count {
+/* .category__count { 
   background-color: var(--color-dark-pink);
   border-radius: 50%;
   color: var(--color-white);
   width: 23px;
   height: 23px;
   line-height: 23px;
-  display: inline-block; /*span속성이라서 컨텐츠를 꽉 감싸는 사이즈라 동그라미가 예쁘게 안나옴 그래서 속성을 변경*/
-  /* position: relative;
-  top: -20px; //카테고리 카운트에 효과 주는건데 나는 별로 안 예쁨
+  display: inline-block; span속성이라서 컨텐츠를 꽉 감싸는 사이즈라 동그라미가 예쁘게 안나옴 그래서 속성을 변경
+  position: relative;
+  top: -20px; 
   left: 4px;
   opacity: 0;
-  transition: all var(--animation-duration) ease-in; */
-}
+  transition: all var(--animation-duration) ease-in;
+} */
 
 .work__projects {
   display: flex;
   flex-wrap: wrap; /*아이템이 꽉차면 자동으로 줄바꿈*/
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  /*버튼을 클릭하면서 바뀌는 효과 */
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -410,6 +418,10 @@ nav li {
   height: 250px;
   margin: 12px;
   background-color: beige;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project img {
