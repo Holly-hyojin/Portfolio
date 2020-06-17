@@ -205,6 +205,9 @@ nav li {
   border-radius: var(--size-border-radius);
   text-shadow: 1px 1px rgb(182, 212, 74);
 }
+.home__contact:hover {
+  background-color: orange;
+}
 
 /* Section common */
 .section {
@@ -220,19 +223,24 @@ nav li {
 
 /* About - 나는 경력이 없어서 학교만 */
 
-.about__experience,
-.shool__decription {
-  align-items: center;
-  margin: 30px 26px;
-  text-align: right; /*글씨정렬*/
+.about__jobs {
+  /*이거 미들에 넣고싶ㅠㅠㅠ*/
+  margin: 34px 26px 0 26px;
+  text-align: center;
+  padding: auto;
 }
 
 .school {
   display: flex;
-  align-items: center;
-  margin: 10px 16px;
-  justify-content: space-between;
+  margin: 15px 16px;
+  justify-content: center; /*이거 하니까 미들에 오네*/
 }
+
+.job__description {
+  margin: 5px 16px;
+  text-align: left;
+}
+
 .school__logo {
   height: 100px;
 }
@@ -561,6 +569,15 @@ nav li {
 /* 반응형 웹, 토글버튼 최소한의 정보만 (ex 스크린이 작아질때 바뀌는 점) 
 그외는 미디어쿼리 밖에 스타일링을 하기 */
 @media screen and (max-width: 768px) {
+  :root {
+    /*  Font Size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  } /*미디어쿼리일때 루트를 다시 지정해주면 사이즈를 하나씩 바꾸지 않아도 전체를 한번에 바꿀 수 있다 */
+
   .navbar__logo {
     top: 24px;
     padding: 15px;
@@ -591,11 +608,34 @@ nav li {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__majors {
     flex-direction: column;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 35px;
+  }
+
+  .about__jobs,
+  .school {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .job__description {
+    text-align: center;
+  }
+
+  .school__logo {
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+    width: 40%;
   }
 
   .skillset {
