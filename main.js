@@ -15,7 +15,6 @@ document.addEventListener('scroll', () => {
 });
 
 // Handle scrolling when tapping on the navbar menu
-
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   // console.log(event.target); click한게 무엇인지 확인
@@ -28,8 +27,13 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
-// Handle click on 'contact Me' button
+// navbar toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
 
+// Handle click on 'contact Me' button
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
   scrollIntoView('#contact');
@@ -68,7 +72,6 @@ arrowUp.addEventListener('click', () => {
 });
 
 // Project button click, filtering
-
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -78,6 +81,14 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return; // filter값이 null이면 아무것도 안함
   }
+
+  // change selecion when it clicked in my work button
+  const active = document.querySelector('.categoty__btn.selected');
+  if (active != null) {
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
+
   projectContainer.classList.add('anim-out'); //버튼이 클릭되면 클래스를 추가
   setTimeout(() => {
     //setTimeout은 브라우저에서 제공하는 api라서 위에 anim가 추가되고 0.3초후에 아래의 코드가 실행
