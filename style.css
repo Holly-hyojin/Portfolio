@@ -452,7 +452,8 @@ nav li {
 }
 
 .project__descrition h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
+  font-weight: var(--weight-bold);
 }
 
 .project__descrition h3:after {
@@ -460,9 +461,9 @@ nav li {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px; /*선 길이 */
   height: 1.5px;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }

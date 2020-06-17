@@ -23,6 +23,7 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return; //null 일 때는 아무것도 하지 않고 null일때만 아래의 콘솔이 실행
   }
+  navbarMenu.classList.remove('open'); //토글메뉴에서 선택후 스크롤 될때 창이 닫히게
   // console.log(event.target.dataset.link);
   scrollIntoView(link);
 });
@@ -83,7 +84,7 @@ workBtnContainer.addEventListener('click', (e) => {
   }
 
   // change selecion when it clicked in my work button
-  const active = document.querySelector('.categoty__btn.selected');
+  const active = document.querySelector('.category__btn.selected');
   if (active != null) {
     active.classList.remove('selected');
   }
