@@ -29,6 +29,8 @@
 
   --color-black: #000000;
 
+  --color-dark-green: rgba(69, 116, 25, 0.966);
+
   /*--accent-color:red;;*/
   /*  Font Size */
   --font-large: 48px;
@@ -183,16 +185,16 @@ nav li {
 }
 
 .home__avatar {
-  width: 210x;
+  width: 230x;
   height: 230px;
-  border-radius: 50%;
+  border-radius: 45%;
   border: 2px solid var(--color-light-white);
 }
 
 .home__titile,
 .home__description {
   color: var(--color-light-white);
-  text-shadow: 1px 1.2px rgba(102, 160, 47, 0.966);
+  text-shadow: 1px 1.2px var(--color-dark-green);
 }
 
 .home__contact {
@@ -232,17 +234,26 @@ nav li {
 
 .school {
   display: flex;
-  margin: 15px 16px;
-  justify-content: center; /*이거 하니까 미들에 오네*/
+  margin: 30px 16px;
+  /* justify-content: center;이거 하니까 미들에 오네*/
+}
+
+.school img {
+  height: 11vh;
+  width: 13vw;
 }
 
 .job__description {
-  margin: 5px 16px;
-  text-align: left;
+  margin: 5px 26px;
+  text-align: right;
+  height: 100%;
+  width: 100%;
 }
 
 .school__logo {
-  height: 100px;
+  max-height: 90%;
+  max-width: 90%;
+  text-align: left;
 }
 
 .shcool__name,
@@ -372,6 +383,7 @@ nav li {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -394,9 +406,9 @@ nav li {
   height: 23px;
   line-height: 23px;
   display: inline-block; span속성이라서 컨텐츠를 꽉 감싸는 사이즈라 동그라미가 예쁘게 안나옴 그래서 속성을 변경
-  position: relative;
+  position: absolute;
   top: -20px; 
-  left: 4px;
+  right: 15px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 } */
@@ -528,7 +540,7 @@ nav li {
 .contact__title,
 .contact__rights {
   color: var(--color-white);
-  text-shadow: 1px 1.2px rgba(102, 160, 47, 0.966);
+  text-shadow: 1px 1.2px var(--color-dark-green);
 }
 
 .contact__links {
@@ -553,8 +565,9 @@ nav li {
   height: 60px;
   right: 50px;
   font-size: 40px;
-  background-color: var(--color-orange);
-  color: var(--color-light-grey);
+  background-color: var(--color-white);
+  color: var(--color-dark-pink);
+  border: 1.5px solid var(--color-dark-pink);
   border-radius: 50%;
   opacity: 0; /*display를 none으로 하면 없어졌다 나타나기 때문에 애니메이션 효과를 줄 수 없다. 그래서 opacity 사용*/
   pointer-events: none; /*opacity는 보이지 않지만 클릭이 되서 이 속성으로 클릭이 안되게 만듦.*/
@@ -610,13 +623,16 @@ nav li {
 
   .section {
     padding: 16px;
+    padding-top: 50px;
   }
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
   .major {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   .about__jobs,
@@ -625,6 +641,12 @@ nav li {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
+  }
+
+  .about__jobs img {
+    width: 40%;
+    height: 35%;
   }
 
   .job__description {
@@ -632,23 +654,49 @@ nav li {
   }
 
   .school__logo {
-    display: block;
-    margin: auto;
     padding-bottom: 10px;
-    width: 40%;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .category__btn {
+    padding: 8px;
+    width: 70%;
+    margin: 2px 0;
+  }
+
   .project {
     flex-grow: 1; /*화면이 작아지면 빈 공간을 채워줌 */
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
   }
 
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+    order: -1;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 10px; /*세부설정사항이 이겨서 tesimonial에 마진bottom줘도 안먹힘*/
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    line-height: 50px; /*버튼 안에서도 중간에 오게 하는것*/
+    font-size: 30px;
+    right: 16px;
+    bottom: 16px;
+    background-color: var(--color-dark-pink);
+    color: var(--color-white);
   }
 }
 
