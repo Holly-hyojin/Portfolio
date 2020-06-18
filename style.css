@@ -653,6 +653,15 @@ nav li {
     text-align: center;
   }
 
+  .job__description p {
+    font-size: var(--font-medium);
+    color: var(--color-black);
+  }
+
+  .shcool__name {
+    font-weight: var(--weight-semi-bold);
+  }
+
   .school__logo {
     padding-bottom: 10px;
   }
