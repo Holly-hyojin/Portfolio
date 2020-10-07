@@ -1,174 +1,150 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
 
-    <title>Holly's Portfolio Web</title>
-    <meta name="description" content="Portfolio for software engineer Holly" />
-    <meta name="author" content="Holly" />
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="image/holly.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Alegreya"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/9de25deb86.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="main.js" defer></script>
-  </head>
-  <body>
-    
-    <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Holly's Portfolio Web</title>
+  <meta name="description" content="Portfolio for software engineer Holly" />
+  <meta name="author" content="Holly" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="image/holly.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/9de25deb86.js" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
       <img class="logoimg" src="image\holly.png" alt="logo"></img>
       <a href="#"></a>
     </div>
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item active" data-link="#home">Home</li>
-          <li class="navbar__menu__item" data-link="#about">About</li>
-          <li class="navbar__menu__item" data-link="#skills">Skills</li>
-          <li class="navbar__menu__item" data-link="#myWork">My work</li>
-          <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
-          <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        </ul>
-     
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item active" data-link="#home">Home</li>
+      <li class="navbar__menu__item" data-link="#about">About</li>
+      <li class="navbar__menu__item" data-link="#skills">Skills</li>
+      <li class="navbar__menu__item" data-link="#myWork">My work</li>
+      <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+      <li class="navbar__menu__item" data-link="#contact">Contact</li>
+    </ul>
 
-      <!-- toggle button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-hamburger"></i>
-      </button>
-    </nav>
 
-    <!-- Home -->
-    <section id="home">
-      <div class="home__container">
-      <img 
-      src="image/holly_profile.JPG " 
-      alt="holly's picture" 
-      class="home__avatar"
-      />
-      <h1 class="home__titile">Hello ! <br />Thanks for visiting my web</h1>
-      <h2 class="home__description">I'm a junior software developer living in Cork, Ireland</h2>
+    <!-- toggle button -->
+    <button class="navbar__toggle-btn">
+      <i class="fas fa-hamburger"></i>
+    </button>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="home__container">
+      <img src="image/holly_profile.JPG " alt="holly's picture" class="home__avatar" />
+      <h1 class="home__titile">Hello ! <br />Thanks for visiting my website</h1>
+      <h2 class="home__description"></h2>
       <button class="home__contact" data-link="#contact">Contact Me</button>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <h1>About me</h1>
-      <p> Start teaching myself in 2020, studying Front-end but would like to run back-end as well. 
-        Want to make better place, help people with programing.
-        나를 어필할 수 있는 두세문장 쓰기
-        학교에서 공부하는 것도 좋았지만 세상에서 무슨 일이 일어나고 있는지 더 배우고 싶어 etc.. 
-        Experience with all phases of the software life-cycle.
-        Passion for learning new technologies. Capable of working within a
-        team environment and independently.
-        ability to plan and time schedule, work under strict time pressure
-        and adapt quickly when needed 
-      </p>
-     
+  <!-- About -->
+  <section id="about" class="section section__container">
+    <h1>About me</h1>
+    <p class="about__me">
+    I'm studying computer programming myself in Cork, Ireland. <br/>
+    I started at the beginning of this year. <br/>
+    dreaming about start new career as a junior software developer! <br/>
+
+    </p>
+
     <div class="about__jobs">
       <div class="school">
-          <img 
-          src="image/collegeOfCommerce.png" 
-          alt="college_Logo" 
-          class="school__logo"
-          />
-            <div class="job__description">
-            <p class="shcool__name">
+        <img src="image/collegeOfCommerce.png" alt="college_Logo" class="school__logo" />
+        <div class="job__description">
+          <p class="shcool__name">
             Java evening class
-            </p>
-            <p class="shcool__period">2020 Jan - 2020 Mar</p>
-             </div>
+          </p>
+          <p class="shcool__period">2020 Jan - 2020 Mar</p>
         </div>
+      </div>
       <div class="school">
-          <img 
-          src="image/ecollege-logo.png" 
-          alt="college_Logo" 
-          class="school__logo">
-            <div class="job__description">
-              <p class="shcool__name">
-                Java Foundations Oracle Junior Associate</p>
-               <p class="shcool__period">2020 Jan - 2020 Jul</p>
-            </div>
-          </div>
-          <div class="school">
-            <img 
-            src="image/fit-logo.png"
-            alt="college_Logo" 
-            class="school__logo">
-              <div class="job__description">
-                <p class="shcool__name">
-                  Software Development</p>
-                 <p class="shcool__period">2020 Jul - 2021 Feb</p>
-              </div>
-            </div>
+        <img src="image/ecollege-logo.png" alt="college_Logo" class="school__logo">
+        <div class="job__description">
+          <p class="shcool__name">
+            Java Foundations Oracle Junior Associate</p>
+          <p class="shcool__period">2020 Jan - 2020 Jul</p>
         </div>
-    </section>
+      </div>
+      <div class="school">
+        <img src="image/Oracle-Certification-badge.png" alt="cert_Logo" class="shcool__logo">
+        <div class="job__description">
+          <p class="shcool__name">
+            Java Foundations Certified Junior Associate</p>
+          <p class="shcool__period">2020 September</p>
 
-    <!--Skills-->
-    <section id="skills" class="section">
-      <div class="section__container">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Skills-->
+  <section id="skills" class="section">
+    <div class="section__container">
       <h1>Skills</h1>
       <h2>Skills & Attributes </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      <p>
+        <!--  -->
       </p>
-        <div class="about__majors">
-          <div class="major">
+      <div class="about__majors">
+        <div class="major">
           <div class="major__icon">
             <i class="fab fa-html5"></i>
           </div>
-          <h2 class="major__title">Front-end</h2>
-        <div class="major__description">HTML, CSS</div>  
+          <h2 class="major__title">HTML, CSS</h2>
+          <div class="major__description"></div>
         </div>
-          <div class="major">
-        <div class="major__icon">
-          <i class="fab fa-js"></i>
-        </div>
-        <h2 class="major__title">JavaScript</h2>
-      <div class="major__description">JS</div>  
-         </div>
-           <div class="major">
-      <div class="major__icon">
-       
-        <i class="fab fa-java"></i>
-      </div>
-      <h2 class="major__title">Java</h2>
-    <div class="major__description">Back-end Java</div>  
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-js"></i>
           </div>
+          <h2 class="major__title">JavaScript</h2>
+          <div class="major__description"></div>
         </div>
-      
-        <!-- 나는 구성을 바꿈  -->
-        <div class="skillset">
-          <div class="skillset__left">
-           <h3 class="skillset__title">Skills</h3>
-           <div class="skill">
-             <div class="skill__description">
-               <span>HTML</span>
-               <span>90%</span>
-             </div>
-             <div class="skill__bar">
+        <div class="major">
+          <div class="major__icon">
+
+            <i class="fab fa-java"></i>
+          </div>
+          <h2 class="major__title">Java</h2>
+          <div class="major__description"></div>
+        </div>
+      </div>
+
+      <!-- 나는 구성을 바꿈  -->
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill__bar">
               <div class="skill_value" style="width: 90%;"></div>
             </div>
-           </div>
-           <div class="skill">
+          </div>
+          <div class="skill">
             <div class="skill__description">
               <span>CSS
               </span>
               <span>80%</span>
             </div>
             <div class="skill__bar">
-             <div class="skill_value" style="width: 82%;"></div>
-           </div>
+              <div class="skill_value" style="width: 82%;"></div>
+            </div>
           </div>
           <div class="skill">
             <div class="skill__description">
@@ -176,40 +152,41 @@
               <span>60%</span>
             </div>
             <div class="skill__bar">
-             <div class="skill_value" style="width: 60%;"></div>
-           </div>
+              <div class="skill_value" style="width: 69%;"></div>
+            </div>
           </div>
           <div class="skill">
             <div class="skill__description">
               <span>Java</span>
-              <span>60%</span>
+              <span>80%</span>
             </div>
             <div class="skill__bar">
-             <div class="skill_value" style="width: 60%;"></div>
-           </div>
-          </div>
-          </div>
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools</h3>
-              <ul class="tools__list"></ul>
-              <li><span>Visual Studio Code</span></li>
-              <li><span>Atom</span></li>
-              <li><span>Eclipse</span></li>
+              <div class="skill_value" style="width: 80%;"></div>
             </div>
-            <div class="etc"> 
-              <h3 class="skillset__title">Etc</h3></div>
-              <ul class="etc__list">
-                <li><span>Git</span></li>
-              </ul>
           </div>
         </div>
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list"></ul>
+            <li><span>Visual Studio Code</span></li>
+            <li><span>Atom</span></li>
+            <li><span>Eclipse</span></li>
+          </div>
+          <div class="etc">
+            <h3 class="skillset__title">Etc</h3>
+          </div>
+          <ul class="etc__list">
+            <li><span>Git</span></li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- myWork -->
-    <section id="myWork" class="section">
-      <div class ="section__container">
+  <!-- myWork -->
+  <section id="myWork" class="section">
+    <div class="section__container">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -219,107 +196,91 @@
           Front-end </button>
         <button class="category__btn" data-filter="back-end">
           Back-end </button>
-          <button class="category__btn" data-filter="mobile">
-            Mobile </button>
+        <button class="category__btn" data-filter="mobile">
+          Mobile </button>
       </div>
 
       <div class="work__projects">
-        <a
-        href="https://holly-hyojin.github.io/holly-website1/"
-        class="project"
-        target="blank"
-        data-type="front-end"
-       >
-        <img src="image/frist_web_main.jpg" alt="first_web" />
-        <div class="project__descrition">
-          <h3>First web page</h3> 
-          <span>using HTML, CSS</span>
-        </div>
+        <a href="https://holly-hyojin.github.io/holly-website1/" class="project" target="blank" data-type="front-end">
+          <img src="image/frist_web_main.jpg" alt="first_web" />
+          <div class="project__descrition">
+            <h3>First web page</h3>
+            <span>using HTML, CSS</span>
+          </div>
         </a>
 
-        <a
-        href="https://holly-hyojin.github.io/Portfolio/"
-        class="project"
-        target="blank" 
-        data-type="back-end"
-       >
-        <img src="image/second_web_main.JPG" alt="second_web" />
-        <div class="project__descrition">
-          <h3>Portfolio Web</h3> 
-          <span>HTML, CSS, JavaScript</span>
-        </div>
+        <a href="https://holly-hyojin.github.io/Portfolio/" class="project" target="blank" data-type="back-end">
+          <img src="image/second_web_main.JPG" alt="second_web" />
+          <div class="project__descrition">
+            <h3>Portfolio Web</h3>
+            <span>HTML, CSS, JavaScript</span>
+          </div>
         </a>
 
-        <a
-        href="https://holly-hyojin.github.io/holly-website1/"
-        class="project"
-        target="blank"
-        data-type="mobile" 
-       >
-        <img src="image/bg1.png" alt="first_web" />
-        <div class="project__descrition">
-          <h3>coming soon</h3> 
-          <span>mobile</span>
-        </div>
+        <a href="https://holly-hyojin.github.io/holly-website1/" class="project" target="blank" data-type="mobile">
+          <img src="image/bg1.png" alt="first_web" />
+          <div class="project__descrition">
+            <h3>coming soon</h3>
+            <span>mobile</span>
+          </div>
         </a>
       </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-   <section id="testimonials" class="section">
-     <div class ="section__container">
-     <h1>Testimonials</h1>
-     <h3>See what they say about me</h3>
-      <div class="testimonial">
-        <img src="image/person.png" 
-      alt="people"
-      class="testimonial__avatar" 
-      />
-       <div class="testimonial__speechBubble">
-         <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa. Volutpat sed cras ornare arcu dui vivamus arcu felis.
-         </p>
-         <p clss="name"><a href="">someone</a> / colleague</p>
-       </div>
-     </div>
-     <div class="testimonial">
-      
-      <div class="testimonial__speechBubble">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa. Volutpat sed cras ornare arcu dui vivamus arcu felis. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. In ornare quam viverra orci sagittis eu volutpat. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Nibh praesent tristique
-        </p>
-        <p clss="name"><a href="">someone</a> / colleague</p>
-      </div>
-      <img src="image/woman (1).png" 
-      alt="people"
-      class="testimonial__avatar" 
-      />
     </div>
-  </div>
-   </section>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk ! I'm ready</h1>
-      <h3 class="contact__detail"></h3>
-      <div class="contact__links">
-          <a href="https://www.linkedin.com/in/hollyhyojin/" target="_blank">
-            <i class="fa fa-linkedin-square"></i>
-          </a>
-          <a href="https://github.com/Holly-hyojin" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="mailto:holly.hyojin@gmail.com" target="_blank"> 
-            <i class="far fa-envelope"></i>
-          </a> 
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="section__container">
+      <h1>Testimonials</h1>
+      <h3>See what they say about me</h3>
+      <div class="testimonial">
+        <img src="image/person.png" alt="people" class="testimonial__avatar" />
+        <div class="testimonial__speechBubble">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. At consectetur lorem donec massa. Volutpat sed cras ornare arcu dui vivamus arcu felis.
+          </p>
+          <p clss="name"><a href="">someone</a> / colleague</p>
+        </div>
       </div>
-      <p class="contact__rights">2020 Hyojin Holly Kim - All right reserved</p>
-    </section>
+      <div class="testimonial">
 
-    <!-- Arrow up -->
-    <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-  </body>
+        <div class="testimonial__speechBubble">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa. Volutpat sed cras ornare arcu
+            dui vivamus arcu felis. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. In ornare quam
+            viverra orci sagittis eu volutpat. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Nibh
+            praesent tristique
+          </p>
+          <p clss="name"><a href="">someone</a> / colleague</p>
+        </div>
+        <img src="image/woman (1).png" alt="people" class="testimonial__avatar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h1 class="contact__title">Let's talk ! I'm ready</h1>
+    <h3 class="contact__detail"></h3>
+    <div class="contact__links">
+      <a href="https://www.linkedin.com/in/hollyhyojin/" target="_blank">
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+      <a href="https://github.com/Holly-hyojin" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="mailto:holly.hyojin@gmail.com" target="_blank">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+    <p class="contact__rights">2020 Hyojin Holly Kim - All right reserved</p>
+  </section>
+
+  <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+
 </html>
