@@ -62,7 +62,7 @@
 
 body {
   margin: 0;
-  font-family: 'Alegreya', sans-serif;
+  font-family: "Alegreya", sans-serif;
   cursor: default; /*마우스 커서가 텍스트에 가도 변하지 않음*/
 }
 
@@ -178,7 +178,7 @@ nav li {
 /* Home */
 
 #home {
-  background: url('image/bg2.png') center/cover no-repeat;
+  background: url("image/bg2.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 110px;
   text-align: center;
@@ -238,8 +238,11 @@ nav li {
   /* justify-content: center;이거 하니까 미들에 오네*/
 }
 
+.about__me {
+  padding: 5px 10px 20px 10px;
+}
+
 .school img {
-  height: 11vh;
   width: 13vw;
 }
 
@@ -250,7 +253,13 @@ nav li {
   width: 100%;
 }
 
-.school__logo {
+.shcool__logo {
+  max-height: 80%;
+  max-width: 80%;
+  text-align: left;
+}
+
+.cert__logo {
   max-height: 90%;
   max-width: 90%;
   text-align: left;
@@ -477,7 +486,7 @@ nav li {
 }
 
 .project__descrition h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -663,7 +672,7 @@ nav li {
   }
 
   .school__logo {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 
   .skillset {
